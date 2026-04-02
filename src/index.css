@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Dancing+Script:wght@400;700&family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap');
+
+@theme {
+  --font-display: 'Playfair Display', serif;
+  --font-accent: 'Dancing Script', cursive;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --color-brand-yellow: #FFD700;
+  --color-brand-amber: #FFA500;
+  --color-brand-pink: #FF1493;
+  --color-brand-magenta: #FF00FF;
+  --color-brand-violet: #8B5CF6;
+
+  --color-surface-void: #000000;
+  --color-surface-deep: #0A0A0F;
+  --color-surface-dark: #111118;
+  --color-surface-mid: #1A1A24;
+  --color-surface-slate: #2A2A3A;
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    background: linear-gradient(135deg, var(--color-brand-yellow) 0%, var(--color-brand-amber) 30%, var(--color-brand-pink) 70%, var(--color-brand-magenta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--color-brand-yellow) 0%, var(--color-brand-amber) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, var(--color-brand-yellow) 0%, var(--color-brand-amber) 30%, var(--color-brand-pink) 70%, var(--color-brand-magenta) 100%);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, var(--color-brand-yellow) 0%, var(--color-brand-amber) 100%);
+  }
+
+  .shadow-glow-pink {
+    box-shadow: 0 0 20px rgba(255,20,147,0.3), 0 0 60px rgba(255,20,147,0.1);
+  }
+
+  .shadow-glow-gold {
+    box-shadow: 0 0 20px rgba(255,215,0,0.3), 0 0 60px rgba(255,215,0,0.1);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 1px rgba(255,215,0,0.1);
+  }
+}
+
+body {
+  background-color: var(--color-surface-deep);
+  color: #F0F0F5;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
