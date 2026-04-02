@@ -1,0 +1,5 @@
+{
+  "name": "bright Event",
+  "description": "Event ticketing and membership platform",
+  "requestFramePermissions": ["camera"]
+}
